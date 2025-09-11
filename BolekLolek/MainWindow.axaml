@@ -1,0 +1,52 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="BolekLolek.MainWindow"
+        Width="800"
+        Height="850"
+        Title="BolekLolek">
+    
+    <StackPanel HorizontalAlignment="Center">
+        
+        <StackPanel Orientation="Horizontal">
+            <TextBox Width="200" Margin="10" Watermark="Nazwa zadania..." x:Name="NazwaZadania"></TextBox>
+        </StackPanel>
+        
+       
+        <StackPanel Margin="10">
+            <ComboBox Width="200" x:Name="BohaterComboBox" SelectionChanged="BohaterComboBox_OnSelectionChanged">
+                <ComboBoxItem Content="Bolek" x:Name="Bolek"/>
+                <ComboBoxItem Content="Lolek" x:Name="Lolek"/>
+            </ComboBox>
+            
+            <RadioButton Content="niski (łatwe)" x:Name="prioNiski" />
+            <RadioButton Content="normalny (zwykłe)" x:Name="prioNormalny"/>
+            <RadioButton Content="wysoki (trudne)" x:Name="prioWysoki"/>
+        </StackPanel>
+        
+        <StackPanel Margin="10">
+            <CheckBox Content="Na Dworze" x:Name="NaDworze"/>
+            <CheckBox Content="Potrzebny sprzęt" x:Name="pSprzet"/>
+            <CheckBox Content="Z udziałem innych kolegów" x:Name="zUdzInnych"/>
+            
+        </StackPanel>
+        
+        <CalendarDatePicker Name="Calendarz"/>
+        
+        <StackPanel>
+            <Button Margin="10" Click="SubmitButton_OnClick" >Dodaj</Button>
+            
+            <ListBox Margin="10" x:Name="ZadaniaListBox"></ListBox>
+            
+            <Button Margin="10">Usuń</Button>
+        </StackPanel>
+    </StackPanel>
+    
+    
+    
+    
+    
+</Window>
+
