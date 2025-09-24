@@ -10,48 +10,40 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        DodajButton.Click += DodajButton_Click;
+        //BohaterComboBox.SelectionChanged += BohaterComboBox_SelectionChanged;
     }
-
-    private void BohaterComboBox_OnSelectionChanged(object? sender, SelectionChangedEventArgs e)
+    /* private void BohaterComboBox_SelectionChanged(object? sender, SelectionChangedEventArgs e)
     {
-        if (BohaterComboBox.SelectedItem is ComboBoxItem bohaterComboBoxItem)
-        {
-            string bohater = bohaterComboBoxItem.Content.ToString();
-            //string imagePath = $"Assets/Images/{bohater}.jpg";
-            //bohaterImage.Source = new Bitmap(imagePath);
-        }
+       var bohater = (BohaterComboBox.SelectedItem as ComboBoxItem).Content.ToString();
+       string zdjecie = bohater switch
+       {
+           "Bolek" => "Assets/bolek.png",
+           "Lolek" => "Assets/lolek.png",
+       };
+
+       BohaterImage.Source = new Avalonia.Media.Imaging.Bitmap(zdjecie);
     }
+    */
     
     
     
-    
-    
-    private void SubmitButton_OnClick(object sender, RoutedEventArgs e)
+    private void DodajButton_Click(object sender, RoutedEventArgs e)
     {
-        string nazwaZad = NazwaZadania.Text;
-
-        string bohater = "";
-        if (BohaterComboBox.SelectedItem is ComboBoxItem bohaterComboBoxItem)
-        {
-            bohater = bohaterComboBoxItem.Content.ToString();
-        }
-
-        string priorytet = "";
+        string nazwaZadania = NazwaZadaniaTextBox.Text ?? "";
         
-        if (prioNiski.IsChecked == true) priorytet = "Niski ";
-        if (prioNormalny.IsChecked == true) priorytet = "Normalny ";
-        if (prioWysoki.IsChecked == true) priorytet = "Wysoki ";
+        object bohater = (BohaterComboBox.SelectedItem as ComboBoxItem)?.Content ?? "brak";
 
-
-        string dodatkowe = "";
-        if(NaDworze.IsChecked == true) dodatkowe = "Na Dworze ";
-        if(pSprzet.IsChecked == true) dodatkowe = "Potrzebny Sprzet ";
-        if(zUdzInnych.IsChecked == true) dodatkowe = "Potrzebny Udział innych";
+        string priorytet = prioNiski.IsChecked == true ? "Niski" :
+            prioNormalny.IsChecked == true ? "Normalny" :
+            prioWysoki.IsChecked == true ? "Wysoki" :
+            "nie wybrano";
         
         
-        ZadaniaListBox.Items.Add(nazwaZad, bohater, priorytet);
         
-        string lista = string.Join(",", ZadaniaListBox.Items);
+        string podsumowanie = $"{bohater} - {nazwaZadania} [{priorytet}]";
+        
+        ZadaniaListBox.Items.Add(podsumowanie);
     }
     
 

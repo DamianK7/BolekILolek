@@ -15,14 +15,14 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BolekLolek
-build_property.ProjectDir = /home/damian/RiderProjects/BolekLolek/BolekLolek/
+build_property.ProjectDir = C:\Users\Damian\RiderProjects\BolekILolek\BolekLolek\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/damian/RiderProjects/BolekLolek/BolekLolek/App.axaml]
+[C:/Users/Damian/RiderProjects/BolekILolek/BolekLolek/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/damian/RiderProjects/BolekLolek/BolekLolek/MainWindow.axaml]
+[C:/Users/Damian/RiderProjects/BolekILolek/BolekLolek/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

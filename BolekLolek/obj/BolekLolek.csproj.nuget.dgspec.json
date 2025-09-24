@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "/home/damian/RiderProjects/BolekLolek/BolekLolek/BolekLolek.csproj": {}
+    "C:\\Users\\Damian\\RiderProjects\\BolekILolek\\BolekLolek\\BolekLolek.csproj": {}
   },
   "projects": {
-    "/home/damian/RiderProjects/BolekLolek/BolekLolek/BolekLolek.csproj": {
+    "C:\\Users\\Damian\\RiderProjects\\BolekILolek\\BolekLolek\\BolekLolek.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/damian/RiderProjects/BolekLolek/BolekLolek/BolekLolek.csproj",
+        "projectUniqueName": "C:\\Users\\Damian\\RiderProjects\\BolekILolek\\BolekLolek\\BolekLolek.csproj",
         "projectName": "BolekLolek",
-        "projectPath": "/home/damian/RiderProjects/BolekLolek/BolekLolek/BolekLolek.csproj",
-        "packagesPath": "/home/damian/.nuget/packages/",
-        "outputPath": "/home/damian/RiderProjects/BolekLolek/BolekLolek/obj/",
+        "projectPath": "C:\\Users\\Damian\\RiderProjects\\BolekILolek\\BolekLolek\\BolekLolek.csproj",
+        "packagesPath": "C:\\Users\\Damian\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Damian\\RiderProjects\\BolekILolek\\BolekLolek\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "/home/damian/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Damian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/usr/lib/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,8 +40,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net9.0": {
@@ -82,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\Damian\\.dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

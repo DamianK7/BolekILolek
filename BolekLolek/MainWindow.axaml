@@ -11,32 +11,46 @@
     <StackPanel HorizontalAlignment="Center">
         
         <StackPanel Orientation="Horizontal">
-            <TextBox Width="200" Margin="10" Watermark="Nazwa zadania..." x:Name="NazwaZadania"></TextBox>
+            <TextBox Width="200" Margin="10" Watermark="Nazwa zadania..." x:Name="NazwaZadaniaTextBox"></TextBox>
         </StackPanel>
         
-       
+       <TextBlock>Wybierz bohatera</TextBlock>
+        
         <StackPanel Margin="10">
-            <ComboBox Width="200" x:Name="BohaterComboBox" SelectionChanged="BohaterComboBox_OnSelectionChanged">
-                <ComboBoxItem Content="Bolek" x:Name="Bolek"/>
-                <ComboBoxItem Content="Lolek" x:Name="Lolek"/>
+            <ComboBox Width="200" x:Name="BohaterComboBox">
+                <ComboBoxItem Content="Bolek" />
+                <ComboBoxItem Content="Lolek" />
             </ComboBox>
             
-            <RadioButton Content="niski (łatwe)" x:Name="prioNiski" />
-            <RadioButton Content="normalny (zwykłe)" x:Name="prioNormalny"/>
-            <RadioButton Content="wysoki (trudne)" x:Name="prioWysoki"/>
+            <Border Width="200" Height="200" BorderThickness="2" BorderBrush="Gray" Margin="5">
+                <Image x:Name="BohaterImage" Stretch="Uniform"/>
+            </Border>
+            
+            <TextBlock>Wybierz priorytet</TextBlock>
+            
+            <RadioButton Content="niski (łatwe)" x:Name="prioNiski" GroupName="Priorytet"/>
+            <RadioButton Content="normalny (zwykłe)" x:Name="prioNormalny" GroupName="Priorytet"/>
+            <RadioButton Content="wysoki (trudne)" x:Name="prioWysoki" GroupName="Priorytet"/>
         </StackPanel>
         
+        <TextBlock>Wybierz opcje dodatkowe</TextBlock>
+        
         <StackPanel Margin="10">
-            <CheckBox Content="Na Dworze" x:Name="NaDworze"/>
-            <CheckBox Content="Potrzebny sprzęt" x:Name="pSprzet"/>
-            <CheckBox Content="Z udziałem innych kolegów" x:Name="zUdzInnych"/>
+            <CheckBox Content="Na Dworze" x:Name="CheckNaDworze"/>
+            <CheckBox Content="Potrzebny sprzęt" x:Name="CheckpSprzet"/>
+            <CheckBox Content="Z udziałem innych kolegów" x:Name="CheckzUdzInnych"/>
             
         </StackPanel>
         
-        <CalendarDatePicker Name="Calendarz"/>
+        <TextBlock>Wybierz datę</TextBlock>
+        
+        <CalendarDatePicker x:Name="Calendarz"/>
         
         <StackPanel>
-            <Button Margin="10" Click="SubmitButton_OnClick" >Dodaj</Button>
+            <Button x:Name="DodajButton" Margin="10" >Dodaj</Button>
+            
+            
+            <TextBlock>Lista zadań</TextBlock>
             
             <ListBox Margin="10" x:Name="ZadaniaListBox"></ListBox>
             
